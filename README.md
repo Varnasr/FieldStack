@@ -1,3 +1,3 @@
-# R Code Repository
+# R Code Repository (Enhanced)
 
-This repository includes 20 R scripts categorized into regression, evaluation, visualization, and data preparation. Each script is fully commented and accompanied by documentation for use.
+This expanded version includes 30+ scripts and templates across regression, evaluation, survey design, visualisation, simulations, and documentation for practical development and public health research.

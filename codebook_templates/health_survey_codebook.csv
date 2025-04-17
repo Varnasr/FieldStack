@@ -1,0 +1,3 @@
+Variable,Label,Type,Source
+age,Age in years,numeric,NFHS
+sex,Gender,categorical,NFHS

@@ -1,0 +1,1 @@
+# DiD example: pre-post intervention model
