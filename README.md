@@ -1,3 +1,3 @@
-# Evaluation Scripts
+# R Code Repository
 
-SROI, qual-quant conversion, impact analysis.
+Scripts for regression, evaluation, and visualisation in R.
