@@ -1,3 +1,3 @@
-# R Code Repository (Enhanced)
+# R Code Repository (Final Version)
 
-This expanded version includes 30+ scripts and templates across regression, evaluation, survey design, visualisation, simulations, and documentation for practical development and public health research.
+Demonstrates data skills in TidyVerse, SQL, Stata-style analysis, Tableau prep, Python integration, and qualitative coding — all in R.

@@ -1,0 +1,1 @@
+# Simulate coded qualitative data for frequency counts

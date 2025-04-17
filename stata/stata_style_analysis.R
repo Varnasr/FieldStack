@@ -1,0 +1,1 @@
+# Stata-style regression summary in R
