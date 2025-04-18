@@ -1,9 +1,43 @@
 
+![FieldStack Banner](banner/FieldStack-banner.png)
+
 # FieldStack 📊
 
-Welcome to **FieldStack** — a structured, multi-format, and modular archive of code, notebooks, scripts, and utilities built for applied data work in development research, MEL (Monitoring, Evaluation & Learning), and public systems.
+Welcome to **FieldStack** — a modular, multi-format archive of reusable code, notebooks, scripts, and utilities built for applied data work in development research, MEL (Monitoring, Evaluation & Learning), and public systems.
 
-It includes reusable and annotated examples across R, Stata, Excel, SQL, and spatial workflows, with a focus on sectors like education, health, gender, climate, and livelihoods — especially in the South Asian context.
+It is designed to be field-ready: reusable, interpretable, and easy to adapt to messy, real-world data across sectors like education, health, gender, climate, and livelihoods.
+
+---
+
+## 📁 Folder Structure
+
+```
+FieldStack/
+├── notebooks/            # Notebooks in .Rmd and .qmd formats
+├── scripts/              # Reusable R scripts
+├── sample data/          # Example datasets (.csv, .xlsx, .sav, .dta, .rds, .RData)
+├── spatial/              # Shapefiles and spatial data
+├── dashboards/           # flexdashboard, Looker, Power BI integration
+├── shiny/                # Starter shiny app
+├── utils/                # Reusable helper functions
+├── sql/                  # R + SQL workflow templates
+├── stata/                # Stata-compatible data and guidance
+├── qualitative/          # Coding summaries and conversion
+├── evaluation/           # Program evaluation utilities
+├── survey_tools/         # Instruments, weights, templates
+├── codebook_templates/   # Documentation patterns
+├── custom_viz/           # ggplot, bullet, waterfall charts
+├── simulation/           # Synthetic data generators
+├── tableau/              # Tableau export-ready examples
+├── tidyverse/            # Core tidy data pipelines
+├── .github/workflows/    # GitHub Actions
+├── LICENSE
+├── README.md
+├── ROADMAP.md
+├── CONTRIBUTING.md
+├── USE_CASES.md
+└── _quarto.yml
+```
 
 ---
 
@@ -12,54 +46,35 @@ It includes reusable and annotated examples across R, Stata, Excel, SQL, and spa
 ### 🔁 Notebooks (`.qmd` + `.Rmd`)
 Reusable examples using Quarto + RMarkdown:
 - Weighted survey analysis
-- SROI & cost-effectiveness evaluation
-- Gender-disaggregated time-use
-- Spatial vulnerability mapping
-- File format import/export (SPSS, Stata, Excel, RDS)
-- Missing data handling
-- Wide-to-long reshaping
-- Dashboard prep & reporting automation
+- Gender time-use
+- Cost-effectiveness and SROI
+- Missing data and reshaping
+- Spatial analysis (Moran's I, joins, maps)
+- Dashboard prep (wide→long, clean outputs)
+- File format conversion (SPSS, Stata, Excel, RDS)
 
 ### 🧠 Scripts (`.R`)
-Standalone modules for:
+Standalone modules:
 - Survey tabulation
-- Time-use analysis
-- SROI ratio calculation
-- Excel summary export
-- Spatial mapping functions
-- Data imputation and reshaping
+- Time-use summaries
+- SROI calculation
+- Spatial joins + mapping
+- Excel + Looker Studio exports
 
-### 🗃 Sample Data
-Small, simulated datasets in:
-- `.csv`, `.sav`, `.dta`, `.xlsx`, `.rds`, `.RData`
-
-### 🌍 Spatial & GIS
-- District-level `.geojson` boundary (India-mock)
-- Spatial joins with access index data
-- Moran’s I with `spdep`, maps with `sf`, `ggplot2`, or `tmap`
-
-### 📊 Dashboards
-- `flexdashboard` example
-- `shiny` starter app
-- Excel exports for Power BI
-- Google Sheets-ready data for Looker Studio
-
-### 📦 Additional Toolkits
-- `utils/`: general helper functions
-- `sql/`: SQL queries from R
-- `stata/`: workflow integration
-- `qualitative/`: coded text → tabular outputs
-- `survey_tools/`, `survey-design/`: field-prep aids
-- `codebook_templates/`, `custom_viz/`, `simulation/`, `evaluation/`, etc.
+### 📊 Dashboarding
+- `flexdashboard` layout
+- Power BI/Excel summaries
+- Google Sheets-ready exports
+- Looker Studio compatible `.csv`
 
 ---
 
 ## 🛠 How to Use
 
-- Browse `notebooks/` or `scripts/` by task
-- Use `sample data/` to test notebooks directly
-- Run `.qmd` in RStudio via **Quarto** or use `.Rmd` with **Knit**
-- Clone, fork, adapt — everything is modular and replaceable
+- Open `.qmd` in RStudio (Quarto) or `.Rmd` (Knit)
+- Use `sample data/` to test notebooks out-of-the-box
+- Reuse `.R` scripts in your project pipeline
+- Visualize spatial outputs or export to external tools
 
 ---
 
@@ -72,4 +87,4 @@ Small, simulated datasets in:
 
 ---
 
-Thanks for visiting. You're welcome to reuse or adapt any of this — and if you'd like to contribute or co-develop tools, get in touch!
+Thanks for visiting. Contributions welcome — this is a living repository that grows from practice.
