@@ -1,7 +1,7 @@
 
-# R Code Repository 📊
+# FieldStack 📊
 
-Welcome to the R Code Repository — a structured, multi-format, and modular archive of code, notebooks, scripts, and utilities built for applied data work in development research, MEL (Monitoring, Evaluation & Learning), and public systems.
+Welcome to **FieldStack** — a structured, multi-format, and modular archive of code, notebooks, scripts, and utilities built for applied data work in development research, MEL (Monitoring, Evaluation & Learning), and public systems.
 
 It includes reusable and annotated examples across R, Stata, Excel, SQL, and spatial workflows, with a focus on sectors like education, health, gender, climate, and livelihoods — especially in the South Asian context.
 
