@@ -1,50 +1,43 @@
 
-# 🗺️ FieldStack Roadmap
+# 🛣️ FieldStack Roadmap (2024)
 
-This document outlines the current structure, upcoming enhancements, and contribution areas for the FieldStack repository — a reusable, field-oriented R toolkit for data analysis in MEL, evaluation, and development research.
-
----
-
-## 🔧 Current Capabilities (v1.0)
-
-- ✅ 10 Quarto + RMarkdown notebooks
-- ✅ All notebooks runnable with included data
-- ✅ `.R` scripts for common reusable tasks
-- ✅ Support for file import/export: `.csv`, `.xlsx`, `.sav`, `.dta`, `.rds`, `.RData`
-- ✅ Spatial workflows using `sf`, `spdep`, and mock `.geojson` files
-- ✅ Dashboard prep: Power BI, Excel, Looker Studio compatible
-- ✅ Starter `shiny` app
-- ✅ GitHub Actions for rendering
+This document outlines planned and in-progress enhancements to ensure FieldStack remains a high-quality, reusable repository for MEL and applied evaluation work.
 
 ---
 
-## 🚧 Planned Additions
+## ✅ Completed (as of Apr 2024)
 
-- [ ] Modular `testthat` test suite for functions
-- [ ] Examples of automated reporting to PowerPoint
-- [ ] Expand `shiny/` with linked input/output logic
-- [ ] Add real (anonymized) district-level public health dataset
-- [ ] Add notebook comparison: `survey::svydesign()` vs `srvyr::as_survey_design()`
-- [ ] Basic machine learning classification (e.g. logistic w/ LASSO)
-
----
-
-## 🧠 Contributor Opportunities
-
-- Translating notebooks to French, Hindi, Spanish
-- Adding `.do` file equivalents for Stata users
-- Converting scripts to Python (for a future FieldStack-Py)
-- Writing tests for utility functions
-- Sharing anonymized sample data
+- [x] Fully working R scripts for 5 core sectors (gender, public health, education, climate, MEL)
+- [x] Quarto notebooks with inline charts, data loads, and exports
+- [x] Sample data for each module using India-relevant district indicators
+- [x] `testthat` unit tests for all core scripts
+- [x] GitHub Actions for CI and Quarto rendering
+- [x] Citation metadata and usage instructions
+- [x] Project branding and folder map
 
 ---
 
-## 📦 Releases
+## 🧪 In Progress
 
-- **v1.0** — Core structure, 10 notebooks, dashboards, spatial, format compatibility
-- **v1.1** — Expanded shiny apps, machine learning add-on, new datasets
-- **v1.2+** — Internationalisation, real field contributions
+- [ ] Add additional `sf`-based spatial mapping examples
+- [ ] Modularise functions with custom R packages (`R/` folder)
+- [ ] Add `.Rmd` versions of all `.qmd` notebooks
+- [ ] Streamlined Shiny dashboard prototype
 
 ---
 
-We welcome forks, improvements, and field-use feedback!
+## 🔜 Planned Features
+
+- [ ] Expand sample datasets to include real MoSPI/NSS/Census excerpts
+- [ ] Add `contrib/` folder for externally submitted use cases
+- [ ] Translation-ready versions for multilingual training
+- [ ] Zenodo DOI and GitHub Release versioning
+- [ ] Educational visual walkthrough (`.gif` or `.mp4`) for new users
+
+---
+
+## 💬 Feedback & Contributions
+
+You’re welcome to fork, submit pull requests, or suggest improvements via Issues.  
+For structured suggestions, see `CONTRIBUTING.md`.
+
