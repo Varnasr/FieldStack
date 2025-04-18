@@ -1,87 +1,97 @@
 
 # FieldStack 📊
 
-Reusable R Scripts, Notebooks, and Sample Data for Applied MEL & Evaluation  
+![FieldStack banner](banner/FieldStack_banner.png)  
+Reusable R Scripts, Notebooks, and Sample Data for Evaluation, MEL, and Social Research
+
 ![R tests](https://github.com/Varnasr/FieldStack/actions/workflows/r-tests.yml/badge.svg)
 ![Quarto Render](https://github.com/Varnasr/FieldStack/actions/workflows/quarto-render.yml/badge.svg)
 
 ---
 
-## 🔍 About This Repository
+## 👋 Welcome
 
-**FieldStack** is a structured collection of reproducible code and analysis tools for monitoring, evaluation, and social research projects — especially in public health, climate resilience, gender equity, and education.
+**FieldStack** is a personal, open-source collection of reusable R code, Quarto notebooks, and sample datasets that I’ve developed over years of working in public health, gender equity, education, climate resilience, and MEL.
 
-This repo is designed for:
-- MEL professionals needing clean, tested R code
-- Students and researchers working on field-based data
-- Analysts building visual summaries or dashboard exports
+It’s meant for:
+- Researchers and MEL professionals needing clean, modular R logic
+- Students looking for working examples tied to real development problems
+- Field practitioners building quick summaries, dashboards, or insights
+
+Every script and notebook runs out of the box using included data.  
+Everything is tested, documented, and designed to reflect **real South Asian fieldwork needs**.
 
 ---
 
-## 📦 Included Modules (2024 Update)
+## 📦 Included Modules (2025)
 
-This version of FieldStack includes 5 complete, runnable modules — each with real `.R` scripts, runnable `.qmd` notebooks, tests, and sample data drawn from Indian district indicators.
+Each module includes:
+- `scripts/`: R logic with examples
+- `notebooks/`: Visual walkthroughs in `.qmd`
+- `sample_data/`: District-level datasets
+- `tests/`: Validation with `testthat`
 
 | Sector       | Notebook                            | Description                                                                 |
 |--------------|--------------------------------------|-----------------------------------------------------------------------------|
-| Gender       | `gender_labour_summary.qmd`         | Weighted summary of female employment using survey-style data              |
-| Public Health| `public_health_index.qmd`           | District-wise health access index combining PHC, subcentre, and CHC access |
-| Education    | `education_summary.qmd`             | Pass rate visualisations by district and gender                            |
-| Climate      | `climate_risk_summary.qmd`          | Vulnerability index using flood, drought, population density               |
-| MEL / Dashboards | `mel_dashboard_summary.qmd`     | Wide-to-long reshaping for dashboard-ready outputs                         |
+| Gender       | `gender_labour_summary.qmd`         | Weighted female employment summary from survey-style data                  |
+| Public Health| `public_health_index.qmd`           | Health access index using PHC, CHC, and subcentre availability             |
+| Education    | `education_summary.qmd`             | District- and gender-wise school pass rates                                |
+| Climate      | `climate_risk_summary.qmd`          | Vulnerability index using flood, drought, and temperature variability      |
+| MEL          | `mel_dashboard_summary.qmd`         | Wide-to-long reshaping for Power BI/Looker dashboards                      |
 
 ---
 
-## 📁 Folder Structure
+## 🧪 How to Use
 
-```
-FieldStack/
-├── scripts/         # R scripts with main logic
-├── notebooks/       # Quarto notebooks (runnable)
-├── tests/           # Unit tests using testthat
-├── sample_data/     # CSVs used in examples
-├── banner/          # Project banner image
-```
-
----
-
-## 🚀 How to Use
-
-- ✅ All notebooks are ready-to-run with bundled data  
-- 🧪 To test all scripts:
+- 🔁 Clone the repo or download ZIP
+- 📊 Open any `.qmd` in RStudio to explore summaries
+- 🧪 To run all tests:
   ```r
   source("tests/run_all_tests.R")
   ```
-- 📤 To export dashboards: use the MEL module or edit output steps in notebooks
+
+To export dashboard-ready CSVs, use the MEL module or edit any notebook’s output block.
 
 ---
 
-## 🧾 Citation & Credit
+## 📁 Folder Map
 
-If you use this repository in your work, please cite:
-
-```bibtex
-@misc{sriraman2024fieldstack,
-  author       = {Varna Sri Raman},
-  title        = {FieldStack: Reusable R Code for MEL, Evaluation, and Social Data},
-  year         = {2024},
-  howpublished = {\url{https://github.com/Varnasr/FieldStack}},
-  note         = {GitHub repository}
-}
+```
+FieldStack/
+├── scripts/         # Core reusable R functions
+├── notebooks/       # Quarto notebooks (runnable)
+├── tests/           # Unit tests
+├── sample_data/     # Example CSVs for each use case
+├── banner/          # Banner image
 ```
 
 ---
 
-## 🔗 See Also
+## 🔗 Related
 
-If you're working in Python, check out the companion repository:  
-**EquityStack** → [https://github.com/Varnasr/EquityStack](https://github.com/Varnasr/EquityStack)
+🌐 Also see:  
+**EquityStack** → Python + Jupyter + Notebooks for social data  
+🔗 [github.com/Varnasr/EquityStack](https://github.com/Varnasr/EquityStack)
 
 ---
 
 ## 📜 License
 
-FieldStack is released under the MIT License — feel free to reuse, remix, and build on it.
+MIT License — feel free to fork, reuse, or build on this work.
+
+---
+
+## 🧾 Citation
+
+```bibtex
+@misc{sriraman2025fieldstack,
+  author       = {Varna Sri Raman},
+  title        = {FieldStack: Reusable R Code for MEL, Evaluation, and Social Data},
+  year         = {2025},
+  howpublished = {\url{https://github.com/Varnasr/FieldStack}},
+  note         = {GitHub repository}
+}
+```
 
 ---
 
@@ -91,3 +101,21 @@ FieldStack is released under the MIT License — feel free to reuse, remix, and 
 - 🌐 [varnasr.github.io](https://varnasr.github.io)  
 - 🧵 [Threads](https://www.threads.net/@varnasriraman)  
 - 💼 [LinkedIn](https://www.linkedin.com/in/varna)
+
+
+---
+
+## 🧠 Why FieldStack?
+
+This repository reflects my approach to building transparent, reusable, and field-adapted tools for the social sector — especially in the Indian and South Asian context.  
+
+I believe good evaluation tools should be:
+- Easy to adapt 🧩
+- Easy to test 🔍
+- Easy to learn from 📚
+
+You're welcome to explore, borrow, cite, fork — or reach out with your own use cases.
+
+Thanks for visiting ✨  
+– Varna
+
