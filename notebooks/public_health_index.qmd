@@ -1,0 +1,43 @@
+
+---
+title: "District Health Access Index"
+format: html
+editor: visual
+---
+
+```{r setup}
+library(tidyverse)
+source("scripts/health_access_index.R")
+```
+
+## 📥 Load Health Infrastructure Data
+
+```{r}
+df <- read.csv("sample_data/health_services.csv")
+head(df)
+```
+
+---
+
+## 🧮 Compute Health Access Index
+
+```{r}
+access_df <- compute_access_index(df)
+print(access_df)
+```
+
+---
+
+## 📊 Visualise Health Access by District
+
+```{r}
+ggplot(access_df, aes(x = reorder(district, access_index), y = access_index)) +
+  geom_col(fill = "forestgreen") +
+  coord_flip() +
+  labs(
+    title = "Health Access Index by District",
+    y = "Access Index (per 1000 population)",
+    x = "District"
+  ) +
+  theme_minimal()
+```

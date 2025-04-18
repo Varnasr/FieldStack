@@ -1,0 +1,47 @@
+
+---
+title: "MEL Dashboard Summary"
+format: html
+editor: visual
+---
+
+```{r setup}
+library(tidyverse)
+source("scripts/mel_reshape.R")
+```
+
+## 📥 Load MEL Indicator Data
+
+```{r}
+df <- read.csv("sample_data/mel_indicators_wide.csv")
+head(df)
+```
+
+---
+
+## 🔄 Reshape to Dashboard Format
+
+```{r}
+df_long <- reshape_indicators(df)
+head(df_long)
+```
+
+---
+
+## 📤 Export for Looker Studio or Power BI
+
+```{r}
+write.csv(df_long, "outputs/mel_indicators_long.csv", row.names = FALSE)
+```
+
+---
+
+## 📊 Visual Check
+
+```{r}
+ggplot(df_long, aes(x = quarter, y = value, fill = indicator)) +
+  geom_col(position = "dodge") +
+  facet_wrap(~ program) +
+  labs(title = "Dashboard-Ready MEL Indicators") +
+  theme_minimal()
+```
