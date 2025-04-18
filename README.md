@@ -1,7 +1,7 @@
+![FieldStack banner](banner/FieldStack_banner.png)  
 
 # FieldStack 📊
 
-![FieldStack banner](banner/FieldStack_banner.png)  
 Reusable R Scripts, Notebooks, and Sample Data for Evaluation, MEL, and Social Research
 
 ![R tests](https://github.com/Varnasr/FieldStack/actions/workflows/r-tests.yml/badge.svg)
