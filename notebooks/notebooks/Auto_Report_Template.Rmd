@@ -1,0 +1,30 @@
+
+---
+title: "Auto-Generated Summary Report"
+output: html_document
+---
+
+# Program Summary Report
+
+This notebook creates a clean summary from tabular data, which can be rendered automatically with `rmarkdown::render()`.
+
+```{r}
+library(knitr)
+library(dplyr)
+
+df <- read.csv("report_summary.csv")
+kable(df)
+```
+
+## Plot Scores
+
+```{r}
+library(ggplot2)
+
+ggplot(df, aes(x=district, y=avg_score)) +
+  geom_col(fill="orange") +
+  theme_minimal() +
+  labs(title = "Average Program Score by District")
+```
+
+---

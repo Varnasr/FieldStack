@@ -1,0 +1,33 @@
+
+---
+title: "Reshape Wide to Long Format"
+output: html_document
+---
+
+# Reshaping Data for Dashboards
+
+This notebook shows how to pivot indicator data from wide to long for easier analysis and visualization.
+
+```{r}
+library(dplyr)
+library(tidyr)
+
+df <- read.csv("indicator_wide_format.csv")
+long_df <- df %>%
+  pivot_longer(cols = starts_with("edu_"):starts_with("health_"),
+               names_to = "indicator",
+               values_to = "value")
+head(long_df)
+```
+
+## Summarize
+
+```{r}
+summary_table <- long_df %>%
+  group_by(indicator) %>%
+  summarise(mean_value = mean(value))
+
+print(summary_table)
+```
+
+---

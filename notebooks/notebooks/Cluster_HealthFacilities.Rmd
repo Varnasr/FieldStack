@@ -1,0 +1,47 @@
+
+---
+title: "K-Means Clustering of Health Facilities"
+output: html_document
+---
+
+# K-Means Clustering of Health Facilities
+
+This notebook demonstrates how to use k-means clustering to segment health facilities based on patient load and staffing levels.
+
+```{r setup, message=FALSE}
+library(dplyr)
+library(ggplot2)
+library(cluster)
+library(factoextra)
+```
+
+## Load Data
+
+```{r}
+df <- read.csv("health_facilities.csv")
+head(df)
+```
+
+## Scale and Cluster
+
+```{r}
+features <- df %>% select(patients_per_day, doctors)
+scaled <- scale(features)
+set.seed(123)
+km <- kmeans(scaled, centers = 3, nstart = 25)
+df$cluster <- as.factor(km$cluster)
+```
+
+## Plot Clusters
+
+```{r}
+fviz_cluster(km, data = scaled, geom = "point", ellipse.type = "convex")
+```
+
+## Check Cluster Centers
+
+```{r}
+aggregate(features, by=list(Cluster=df$cluster), mean)
+```
+
+---
