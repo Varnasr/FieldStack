@@ -2,6 +2,10 @@
 ![FieldStack Banner](banner/FieldStack-banner.png)
 
 # FieldStack 📊
+# FieldStack 📊  
+![R tests](https://github.com/Varnasr/FieldStack/actions/workflows/r-tests.yml/badge.svg)
+
+![Quarto Render](https://github.com/Varnasr/FieldStack/actions/workflows/quarto-render.yml/badge.svg)
 
 Welcome to **FieldStack** — a modular, multi-format archive of reusable code, notebooks, scripts, and utilities built for applied data work in development research, MEL (Monitoring, Evaluation & Learning), and public systems.
 
