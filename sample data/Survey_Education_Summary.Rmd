@@ -1,5 +1,0 @@
-# Survey-Weighted Education Summary
-
-```{r}
-# Apply survey weights and summarise
-```
