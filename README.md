@@ -92,3 +92,22 @@ Thanks for visiting. Contributions welcome — this is a living repository that 
 If you use this repository in your work, please cite it as:
 Sri Raman, V. (2025). *[EquityStack/FieldStack]: Reusable Tools for Applied Data Analysis and Evaluation*. GitHub. https://github.com/Varnasr/EquityStack
 
+---
+
+### 🔗 See Also
+
+If you're working in Python, check out the companion repository:  
+**EquityStack** → [https://github.com/Varnasr/EquityStack](https://github.com/Varnasr/EquityStack)
+
+---
+
+### 📜 License
+
+FieldStack is released under the MIT License — feel free to reuse, remix, and build on it.
+
+---
+
+### 🟢 Run-Ready Notebooks
+
+Notebooks marked with this symbol are ready to run out-of-the-box using the `/sample data` folder.  
+No extra setup required beyond installing the standard R packages.
