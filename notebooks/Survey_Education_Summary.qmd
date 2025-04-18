@@ -1,0 +1,32 @@
+
+---
+title: "Survey-Weighted Education Summary"
+format: html
+---
+
+# Survey-Weighted Education Summary
+
+This notebook demonstrates how to summarise educational outcomes using survey weights.
+
+```{r}
+library(dplyr)
+library(srvyr)
+library(ggplot2)
+
+data <- read.csv("sample data/education_survey_sample.csv")
+
+data_clean <- data %>%
+  filter(!is.na(literacy), !is.na(school_completion), !is.na(weight))
+
+survey_design <- data_clean %>%
+  as_survey_design(weights = weight)
+
+survey_summary <- survey_design %>%
+  group_by(gender) %>%
+  summarise(
+    literacy_rate = survey_mean(literacy),
+    school_completion_rate = survey_mean(school_completion)
+  )
+
+print(survey_summary)
+```

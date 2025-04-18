@@ -1,0 +1,21 @@
+
+---
+title: "SROI Walkthrough"
+format: html
+---
+
+# SROI Walkthrough
+
+```{r}
+library(dplyr)
+library(ggplot2)
+
+df <- read.csv("sample data/sroi_sample.csv")
+
+df <- df %>%
+  mutate(sroi_ratio = outcome_value / cost)
+
+ggplot(df, aes(x = intervention, y = sroi_ratio)) +
+  geom_col(fill = "steelblue") +
+  labs(title = "SROI by Intervention")
+```

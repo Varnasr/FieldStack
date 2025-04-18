@@ -1,0 +1,12 @@
+project:
+  type: website
+  output-dir: docs
+website:
+  title: "R Code Repository"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+format:
+  html:
+    theme: cosmo

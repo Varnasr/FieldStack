@@ -1,0 +1,19 @@
+
+---
+title: "Auto Reporting Template"
+format: html
+---
+
+# Report Output
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(knitr)
+
+df <- read.csv("sample data/report_summary.csv")
+kable(df)
+
+ggplot(df, aes(x = district, y = avg_score)) +
+  geom_col(fill = "darkorange")
+```

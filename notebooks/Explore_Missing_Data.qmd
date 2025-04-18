@@ -1,0 +1,17 @@
+
+---
+title: "Missing Data Exploration"
+format: html
+---
+
+# Missing Data Summary
+
+```{r}
+library(naniar)
+library(dplyr)
+
+df <- read.csv("sample data/missing_data_sample.csv")
+
+gg_miss_var(df)
+vis_miss(df)
+```

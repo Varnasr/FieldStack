@@ -1,0 +1,16 @@
+
+---
+title: "R Code Repository"
+format: html
+---
+
+Welcome to the R Code Repository. This site showcases notebooks for:
+
+- Survey data analysis
+- Program evaluation (SROI)
+- Gender and time use
+- Spatial vulnerability
+- Reporting automation
+- Missing data diagnostics
+
+Use the navigation bar to explore.

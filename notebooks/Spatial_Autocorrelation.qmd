@@ -1,0 +1,20 @@
+
+---
+title: "Spatial Autocorrelation"
+format: html
+---
+
+# Spatial Autocorrelation
+
+```{r}
+library(dplyr)
+library(spdep)
+
+df <- read.csv("sample data/spatial_districts.csv")
+coordinates <- df[, c("lon", "lat")]
+
+nb <- knn2nb(knearneigh(coordinates, k=2))
+lw <- nb2listw(nb, style="W")
+
+moran.test(df$vulnerability_index, lw)
+```
