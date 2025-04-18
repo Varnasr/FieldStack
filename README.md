@@ -88,3 +88,7 @@ Standalone modules:
 ---
 
 Thanks for visiting. Contributions welcome — this is a living repository that grows from practice.
+
+If you use this repository in your work, please cite it as:
+Sri Raman, V. (2025). *[EquityStack/FieldStack]: Reusable Tools for Applied Data Analysis and Evaluation*. GitHub. https://github.com/Varnasr/EquityStack
+
