@@ -1,0 +1,14 @@
+
+cff-version: 1.2.0
+message: "If you use this repository, please cite it using the metadata below."
+title: "FieldStack: Reusable R Code for MEL, Evaluation, and Social Data"
+authors:
+  - family-names: "Sri Raman"
+    given-names: "Varna"
+    orcid: "https://orcid.org/0000-0002-XXXX-XXXX"
+date-released: 2024-04-18
+version: "1.0.0"
+url: "https://github.com/Varnasr/FieldStack"
+repository-code: "https://github.com/Varnasr/FieldStack"
+license: "MIT"
+type: "software"
