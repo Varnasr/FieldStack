@@ -1,5 +1,18 @@
 ![FieldStack banner](banner/FieldStack_banner.png)  
 
+<!-- TOC START -->
+## 📚 Table of Contents
+
+- [What’s Inside](#-whats-inside)
+- [How to Use](#-how-to-use)
+- [Citation](#-citation)
+- [Repository Status & Metadata](#-repository-status--metadata)
+- [Related Repositories](#-related-repositories)
+- [License](#-license)
+
+<!-- TOC END -->
+
+
 # FieldStack 📊
 
 Reusable R Scripts, Notebooks, and Sample Data for Evaluation, MEL, and Social Research
@@ -72,6 +85,14 @@ FieldStack/
 🌐 Also see:  
 **EquityStack** → Python + Jupyter + Notebooks for social data  
 🔗 [github.com/Varnasr/EquityStack](https://github.com/Varnasr/EquityStack)
+
+---
+
+## 📊 Repository Status & Metadata
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?label=license)](LICENSE)  
+[![Build Status](https://github.com/Varnasr/FieldStack/actions/workflows/ci.yml/badge.svg)](https://github.com/Varnasr/FieldStack/actions)  
+[![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen?label=2025)]()
 
 ---
 
