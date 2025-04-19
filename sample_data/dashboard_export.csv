@@ -1,0 +1,7 @@
+Indicator,District,Score
+Coverage,DistrictA,0.82
+Access,DistrictA,0.76
+Retention,DistrictA,0.91
+Coverage,DistrictB,0.67
+Access,DistrictB,0.71
+Retention,DistrictB,0.85

@@ -1,47 +1,27 @@
-
 ---
 title: "MEL Dashboard Summary"
 format: html
 editor: visual
 ---
 
-```{r setup}
+```{r}
+# Load required libraries
 library(tidyverse)
-source("scripts/mel_reshape.R")
-```
 
-## 📥 Load MEL Indicator Data
+# Sample input (replace with real data or read.csv)
+df <- data.frame(
+  Indicator = c("Coverage", "Access", "Retention"),
+  DistrictA = c(0.82, 0.76, 0.91),
+  DistrictB = c(0.67, 0.71, 0.85)
+)
 
-```{r}
-df <- read.csv("sample_data/mel_indicators_wide.csv")
-head(df)
-```
+# Reshape for dashboard
+df_long <- df %>%
+  pivot_longer(-Indicator, names_to = "District", values_to = "Score")
 
----
+# Save as dashboard-ready CSV
+write.csv(df_long, "dashboard_export.csv", row.names = FALSE)
 
-## 🔄 Reshape to Dashboard Format
-
-```{r}
-df_long <- reshape_indicators(df)
+# Display preview table
 head(df_long)
-```
-
----
-
-## 📤 Export for Looker Studio or Power BI
-
-```{r}
-write.csv(df_long, "outputs/mel_indicators_long.csv", row.names = FALSE)
-```
-
----
-
-## 📊 Visual Check
-
-```{r}
-ggplot(df_long, aes(x = quarter, y = value, fill = indicator)) +
-  geom_col(position = "dodge") +
-  facet_wrap(~ program) +
-  labs(title = "Dashboard-Ready MEL Indicators") +
-  theme_minimal()
 ```
