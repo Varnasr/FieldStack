@@ -1,11 +1,13 @@
-![FieldStack banner](banner/FieldStack_banner.png)  
+<!-- Banner placeholder -->
+<!-- ![FieldStack banner](banner/FieldStack_banner.png) -->
+> _(Banner not displaying? Ensure `banner/FieldStack_banner.png` is pushed to the correct folder with exact name & case.)_
 
 <!-- TOC START -->
 ## 📚 Table of Contents
 
 - [What’s Inside](#-whats-inside)
 - [How to Use](#-how-to-use)
-- [Citation](#-citation)
+- [Cite This](#-cite-this)
 - [Repository Status & Metadata](#-repository-status--metadata)
 - [Related Repositories](#-related-repositories)
 - [License](#-license)
@@ -17,12 +19,10 @@
 
 Reusable R Scripts, Notebooks, and Sample Data for Evaluation, MEL, and Social Research
 
-![R tests](https://github.com/Varnasr/FieldStack/actions/workflows/r-tests.yml/badge.svg)
-![Quarto Render](https://github.com/Varnasr/FieldStack/actions/workflows/quarto-render.yml/badge.svg)
-<!-- [![CI](https://github.com/Varnasr/FieldStack/actions/workflows/ci.yml/badge.svg)](...) -->
-CI workflow enabled (badge will display after first successful run)
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15250764.svg)](https://doi.org/10.5281/zenodo.15250764)
+<!-- ![R tests](https://github.com/Varnasr/FieldStack/actions/workflows/r-tests.yml/badge.svg) -->
+<!-- ![Quarto Render](https://github.com/Varnasr/FieldStack/actions/workflows/quarto-render.yml/badge.svg) -->
+<!-- ![CI](https://github.com/Varnasr/FieldStack/actions/workflows/ci.yml/badge.svg) -->
+CI workflows enabled — badge will display after first successful run
 
 ---
 
@@ -88,6 +88,8 @@ FieldStack/
 
 > Sri Raman, V. (2025). *FieldStack: Reproducible R Code for MEL, Evaluation, and Social Data*. Zenodo. https://doi.org/10.5281/zenodo.15250764
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15250764.svg)](https://doi.org/10.5281/zenodo.15250764)
+
 ```bibtex
 @software{sriraman_fieldstack_2025,
   author       = {Varna Sri Raman},
@@ -99,17 +101,12 @@ FieldStack/
 }
 ```
 
-> 💡 You can also cite this repository using the Zenodo DOI badge above, or by downloading the `CITATION.cff` file.
-
 ---
 
 ## 📊 Repository Status & Metadata
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?label=license)](LICENSE)  
-<!-- [![CI](https://github.com/Varnasr/FieldStack/actions/workflows/ci.yml/badge.svg)](...) -->
-CI workflow enabled (badge will display after first successful run)  
-[![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen?label=2025)]()  
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15250764.svg)](https://doi.org/10.5281/zenodo.15250764)
+[![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen?label=2025)]()
 
 ---
 
