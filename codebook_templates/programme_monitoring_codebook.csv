@@ -1,2 +1,8 @@
-Indicator,Definition,Unit,Source
-coverage_pct,Coverage %,percent,Programme MIS
+variable_name,description,indicator_type,data_source
+attendance_rate,"Daily attendance rate at centers","quantitative","MIS"
+activity_type,"Type of program activity conducted","categorical","Monitoring checklist"
+satisfaction_score,"Beneficiary satisfaction rating (1-5)","ordinal","Survey"
+trainer_hours,"Hours of training delivered per week","quantitative","Trainer log"
+issue_flagged,"Was an operational issue flagged this month?","binary","Monthly report"
+follow_up_done,"Was a follow-up visit completed within 10 days?","binary","Field visit log"
+cost_per_output,"Total cost per unit delivered","quantitative","Program finance" 

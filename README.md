@@ -8,6 +8,21 @@
 - [What’s Inside](#-whats-inside)
 - [How to Use](#-how-to-use)
 - [Cite This](#-cite-this)
+
+
+---
+
+## 🧰 Featured Modules
+
+Explore working, documented code across:
+
+- 📊 **Evaluation**: [`cost_effectiveness.R`](evaluation/cost_effectiveness.R) · [`sroi_calc.R`](evaluation/sroi_calc.R)
+- 🧮 **Regression**: [`interaction_model.R`](regression/interaction_model.R) · [`multicollinearity_check.R`](regression/multicollinearity_check.R)
+- 🧠 **Qualitative**: [`qual_coding_example.R`](qualitative/qual_coding_example.R)
+- 🐍 **Python Integration**: [`reticulate_example.R`](python_integration/reticulate_example.R)
+- 📍 **Visualization**: [`bullet_chart.R`](custom_viz/bullet_chart.R) · [`waterfall_chart.R`](custom_viz/waterfall_chart.R) · [`map_visualisation_sf.R`](custom_viz/map_visualisation_sf.R)
+
+All scripts run out of the box and include real data or logic.
 - [Repository Status & Metadata](#-repository-status--metadata)
 - [Related Repositories](#-related-repositories)
 - [License](#-license)

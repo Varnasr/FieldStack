@@ -1,3 +1,8 @@
-Variable,Label,Type,Source
-age,Age in years,numeric,NFHS
-sex,Gender,categorical,NFHS
+variable_name,question,label,value_type
+age,"What is your age?","Age in completed years",integer
+sex,"What is your gender?","Male/Female/Other",categorical
+symptoms,"Are you currently experiencing any of the following?",list,checkbox
+bp_check,"Have you had your blood pressure checked in the last year?",yes/no,binary
+diabetes,"Do you have diabetes?",yes/no,binary
+insurance,"Do you have any health insurance coverage?",yes/no,binary
+facility,"Where do you usually go when you’re sick?","PHC/CHC/Private",categorical

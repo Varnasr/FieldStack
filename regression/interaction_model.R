@@ -1,3 +1,5 @@
-# Regression with interaction terms
+# Regression with interaction term
+data(mtcars)
 
-# [Insert script logic here]
+model <- lm(mpg ~ wt * hp, data = mtcars)
+summary(model)
