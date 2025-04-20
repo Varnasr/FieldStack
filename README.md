@@ -1,16 +1,50 @@
-<!-- Banner placeholder -->
-<!-- ![FieldStack banner](banner/FieldStack_banner.png) -->
-> _(Banner not displaying? Ensure `banner/FieldStack_banner.png` is pushed to the correct folder with exact name & case.)_
+![FieldStack banner](https://raw.githubusercontent.com/Varnasr/FieldStack/main/banner/FieldStack_banner.png)
 
 <!-- TOC START -->
 ## 📚 Table of Contents
 
-- [What’s Inside](#-whats-inside)
-- [How to Use](#-how-to-use)
-- [Cite This](#-cite-this)
+- [👋 Welcome](#👋-welcome)
+- [🧠 Why FieldStack](#🧠-why-fieldstack)
+- [🧪 How to Use](#🧪-how-to-use)
+- [🧰 Featured Modules](#🧰-featured-modules)
+- [📁 Folder Map](#📁-folder-map)
+- [📦 Included Modules (2025)](#📦-included-modules-(2025))
+- [🔗 Related](#🔗-related)
+- [📊 Repository Status & Metadata](#📊-repository-status-&-metadata)
+- [📜 License](#📜-license)
+- [📑 Cite This](#📑-cite-this)
+- [✉️ Contact](#✉️-contact)
 
+<!-- TOC END -->
+
+## 👋 Welcome
+
+**FieldStack** is a personal, open-source collection of reusable R code, Quarto notebooks, and sample datasets that I’ve developed over years of working in public health, gender equity, education, climate resilience, and MEL.
+
+It’s meant for:
+- Researchers and MEL professionals needing clean, modular R logic
+- Students looking for working examples tied to real development problems
+- Field practitioners building quick summaries, dashboards, or insights
+
+Every script and notebook runs out of the box using included data.  
+Everything is tested, documented, and designed to reflect **real South Asian fieldwork needs**.
 
 ---
+
+
+## 🧪 How to Use
+
+- 🔁 Clone the repo or download ZIP
+- 📊 Open any `.qmd` in RStudio to explore summaries
+- 🧪 To run all tests:
+  ```r
+  source("tests/run_all_tests.R")
+  ```
+
+To export dashboard-ready CSVs, use the MEL module or edit any notebook’s output block.
+
+---
+
 
 ## 🧰 Featured Modules
 
@@ -41,19 +75,20 @@ CI workflows enabled — badge will display after first successful run
 
 ---
 
-## 👋 Welcome
 
-**FieldStack** is a personal, open-source collection of reusable R code, Quarto notebooks, and sample datasets that I’ve developed over years of working in public health, gender equity, education, climate resilience, and MEL.
+## 📁 Folder Map
 
-It’s meant for:
-- Researchers and MEL professionals needing clean, modular R logic
-- Students looking for working examples tied to real development problems
-- Field practitioners building quick summaries, dashboards, or insights
-
-Every script and notebook runs out of the box using included data.  
-Everything is tested, documented, and designed to reflect **real South Asian fieldwork needs**.
+```
+FieldStack/
+├── scripts/         # Core reusable R functions
+├── notebooks/       # Quarto notebooks (runnable)
+├── tests/           # Unit tests
+├── sample_data/     # Example CSVs for each use case
+├── banner/          # Banner image
+```
 
 ---
+
 
 ## 📦 Included Modules (2025)
 
@@ -73,31 +108,30 @@ Each module includes:
 
 ---
 
-## 🧪 How to Use
 
-- 🔁 Clone the repo or download ZIP
-- 📊 Open any `.qmd` in RStudio to explore summaries
-- 🧪 To run all tests:
-  ```r
-  source("tests/run_all_tests.R")
-  ```
+## 🔗 Related
 
-To export dashboard-ready CSVs, use the MEL module or edit any notebook’s output block.
+🌐 Also see:  
+**EquityStack** → Python + Jupyter + Notebooks for social data  
+🔗 [github.com/Varnasr/EquityStack](https://github.com/Varnasr/EquityStack)
 
 ---
 
-## 📁 Folder Map
 
-```
-FieldStack/
-├── scripts/         # Core reusable R functions
-├── notebooks/       # Quarto notebooks (runnable)
-├── tests/           # Unit tests
-├── sample_data/     # Example CSVs for each use case
-├── banner/          # Banner image
-```
+## 📊 Repository Status & Metadata
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?label=license)](LICENSE)  
+[![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen?label=2025)]()
 
 ---
+
+
+## 📜 License
+
+MIT License — feel free to fork, reuse, or build on this work.
+
+---
+
 
 ## 📑 Cite This
 
@@ -118,26 +152,6 @@ FieldStack/
 
 ---
 
-## 📊 Repository Status & Metadata
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue?label=license)](LICENSE)  
-[![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen?label=2025)]()
-
----
-
-## 🔗 Related
-
-🌐 Also see:  
-**EquityStack** → Python + Jupyter + Notebooks for social data  
-🔗 [github.com/Varnasr/EquityStack](https://github.com/Varnasr/EquityStack)
-
----
-
-## 📜 License
-
-MIT License — feel free to fork, reuse, or build on this work.
-
----
 
 ## ✉️ Contact
 
@@ -148,16 +162,4 @@ MIT License — feel free to fork, reuse, or build on this work.
 
 ---
 
-## 🧠 Why FieldStack?
 
-This repository reflects my approach to building transparent, reusable, and field-adapted tools for the social sector — especially in the Indian and South Asian context.  
-
-I believe good evaluation tools should be:
-- Easy to adapt 🧩
-- Easy to test 🔍
-- Easy to learn from 📚
-
-You're welcome to explore, borrow, cite, fork — or reach out with your own use cases.
-
-Thanks for visiting ✨  
-– Varna
