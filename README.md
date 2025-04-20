@@ -19,6 +19,10 @@ Reusable R Scripts, Notebooks, and Sample Data for Evaluation, MEL, and Social R
 
 ![R tests](https://github.com/Varnasr/FieldStack/actions/workflows/r-tests.yml/badge.svg)
 ![Quarto Render](https://github.com/Varnasr/FieldStack/actions/workflows/quarto-render.yml/badge.svg)
+<!-- [![CI](https://github.com/Varnasr/FieldStack/actions/workflows/ci.yml/badge.svg)](...) -->
+CI workflow enabled (badge will display after first successful run)
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15250764.svg)](https://doi.org/10.5281/zenodo.15250764)
 
 ---
 
@@ -80,19 +84,40 @@ FieldStack/
 
 ---
 
-## 🔗 Related
+## 📑 Cite This
 
-🌐 Also see:  
-**EquityStack** → Python + Jupyter + Notebooks for social data  
-🔗 [github.com/Varnasr/EquityStack](https://github.com/Varnasr/EquityStack)
+> Sri Raman, V. (2025). *FieldStack: Reproducible R Code for MEL, Evaluation, and Social Data*. Zenodo. https://doi.org/10.5281/zenodo.15250764
+
+```bibtex
+@software{sriraman_fieldstack_2025,
+  author       = {Varna Sri Raman},
+  title        = {FieldStack: Reproducible R Code for MEL, Evaluation, and Social Data},
+  year         = 2025,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.15250764},
+  url          = {https://doi.org/10.5281/zenodo.15250764}
+}
+```
+
+> 💡 You can also cite this repository using the Zenodo DOI badge above, or by downloading the `CITATION.cff` file.
 
 ---
 
 ## 📊 Repository Status & Metadata
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?label=license)](LICENSE)  
-[![Build Status](https://github.com/Varnasr/FieldStack/actions/workflows/ci.yml/badge.svg)](https://github.com/Varnasr/FieldStack/actions)  
-[![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen?label=2025)]()
+<!-- [![CI](https://github.com/Varnasr/FieldStack/actions/workflows/ci.yml/badge.svg)](...) -->
+CI workflow enabled (badge will display after first successful run)  
+[![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen?label=2025)]()  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15250764.svg)](https://doi.org/10.5281/zenodo.15250764)
+
+---
+
+## 🔗 Related
+
+🌐 Also see:  
+**EquityStack** → Python + Jupyter + Notebooks for social data  
+🔗 [github.com/Varnasr/EquityStack](https://github.com/Varnasr/EquityStack)
 
 ---
 
@@ -102,27 +127,12 @@ MIT License — feel free to fork, reuse, or build on this work.
 
 ---
 
-## 🧾 Citation
-
-```bibtex
-@misc{sriraman2025fieldstack,
-  author       = {Varna Sri Raman},
-  title        = {FieldStack: Reusable R Code for MEL, Evaluation, and Social Data},
-  year         = {2025},
-  howpublished = {\url{https://github.com/Varnasr/FieldStack}},
-  note         = {GitHub repository}
-}
-```
-
----
-
 ## ✉️ Contact
 
 - 📧 varna[DOT]sr [AT] gmail [DOT] com  
 - 🌐 [varnasr.github.io](https://varnasr.github.io)  
 - 🧵 [Threads](https://www.threads.net/@varnasriraman)  
 - 💼 [LinkedIn](https://www.linkedin.com/in/varna)
-
 
 ---
 
@@ -139,4 +149,3 @@ You're welcome to explore, borrow, cite, fork — or reach out with your own use
 
 Thanks for visiting ✨  
 – Varna
-

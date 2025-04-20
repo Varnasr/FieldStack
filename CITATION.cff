@@ -1,9 +1,14 @@
 cff-version: 1.2.0
-message: "If you use this repository, please cite it as follows."
-title: "FieldStack: Applied R Tools and Evaluation Templates"
-version: "1.0"
+message: "If you use this repository, please cite it as below."
+title: "FieldStack: Reproducible R Code for MEL, Evaluation, and Social Data"
+version: "1.0.0"
+doi: "10.5281/zenodo.15250764"
+date-released: 2025-04-20
 authors:
-  - family-names: "Sri Raman"
-    given-names: "Varna"
-date-released: "2025-04-19"
+  - family-names: Sri Raman
+    given-names: Varna
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+    affiliation: "Independent Development Economist"
+license: MIT
 repository-code: "https://github.com/Varnasr/FieldStack"
+url: "https://doi.org/10.5281/zenodo.15250764"
