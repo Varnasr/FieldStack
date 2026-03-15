@@ -10,7 +10,7 @@ library(tidyverse)
 source("scripts/health_access_index.R")
 ```
 
-## 📥 Load Health Infrastructure Data
+## Load Health Infrastructure Data
 
 ```{r}
 df <- read.csv("sample_data/health_services.csv")
@@ -19,7 +19,7 @@ head(df)
 
 ---
 
-## 🧮 Compute Health Access Index
+## Compute Health Access Index
 
 ```{r}
 access_df <- compute_access_index(df)
@@ -28,7 +28,7 @@ print(access_df)
 
 ---
 
-## 📊 Visualise Health Access by District
+## Visualise Health Access by District
 
 ```{r}
 ggplot(access_df, aes(x = reorder(district, access_index), y = access_index)) +
