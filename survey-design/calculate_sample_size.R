@@ -1,1 +1,0 @@
-# Sample size calculation across designs

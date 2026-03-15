@@ -10,7 +10,7 @@ library(tidyverse)
 source("scripts/education_outcomes.R")
 ```
 
-## 📥 Load Education Outcome Data
+## Load Education Outcome Data
 
 ```{r}
 df <- read.csv("sample_data/education_outcomes.csv")
@@ -19,7 +19,7 @@ head(df)
 
 ---
 
-## 🎓 Pass Rates by Gender and District
+## Pass Rates by Gender and District
 
 ```{r}
 summary_df <- summarise_education(df)
@@ -28,7 +28,7 @@ print(summary_df)
 
 ---
 
-## 📊 Visualisation
+## Visualisation
 
 ```{r}
 ggplot(summary_df, aes(x = district, y = pass_rate, fill = gender)) +

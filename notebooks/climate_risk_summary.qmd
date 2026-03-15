@@ -10,7 +10,7 @@ library(tidyverse)
 source("scripts/climate_vulnerability_index.R")
 ```
 
-## 📥 Load Climate Exposure Data
+## Load Climate Exposure Data
 
 ```{r}
 df <- read.csv("sample_data/climate_exposure.csv")
@@ -19,7 +19,7 @@ head(df)
 
 ---
 
-## 🌱 Compute Vulnerability Index
+## Compute Vulnerability Index
 
 ```{r}
 vuln_df <- compute_climate_index(df)
@@ -28,7 +28,7 @@ print(vuln_df)
 
 ---
 
-## 📊 Visualise Climate Risk
+## Visualise Climate Risk
 
 ```{r}
 ggplot(vuln_df, aes(x = reorder(district, climate_index), y = climate_index)) +
