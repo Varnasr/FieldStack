@@ -38,13 +38,26 @@ This is the **applied research layer** of [OpenStacks for Change](https://openst
 | `codebook_templates/` | Variable metadata for health surveys and programme monitoring |
 | `tests/` | 9 testthat unit tests covering all core functions |
 
+### Survey Tools
+
+| Script | What It Does |
+|--------|-------------|
+| `survey_tools/sample_size_calculator.R` | Simple, stratified, and cluster sampling calculations with design effect |
+| `survey_tools/sampling_weights.R` | Base weight calculation, trimming, weighted summary statistics |
+| `survey_tools/survey_summary.R` | Survey design objects, weighted descriptives, proportions using the `survey` package |
+
+### Automated Reporting
+
+| File | What It Does |
+|------|-------------|
+| `automated_reporting/render_reports.R` | Batch Quarto/RMarkdown rendering with logging |
+| `automated_reporting/monthly_summary.qmd` | Quarto template for monthly indicator summary with inline plots |
+
 ### Supporting
 
 | Directory | What It Contains |
 |-----------|-----------------|
 | `python_integration/` | R-Python interop via reticulate |
-| `survey_tools/` | Survey data utilities |
-| `automated_reporting/` | Report generation workflows |
 
 ## Getting Started
 

@@ -1,9 +1,17 @@
 # Automated Reporting
 
-This folder contains example scripts and templates for generating automated reports using Quarto and R. 
-You can batch-render `.qmd` files to PDF/HTML using the `rmarkdown::render()` or `quarto::quarto_render()` commands.
+R scripts and Quarto templates for generating automated field reports.
 
-Example:
+## Contents
+
+| File | Purpose |
+|------|---------|
+| `render_reports.R` | Batch render Quarto notebooks to HTML/PDF |
+| `monthly_summary.qmd` | Template for monthly indicator summary report |
+
+## Usage
+
 ```r
-quarto::quarto_render("monthly_summary.qmd", output_format = "html")
+source("automated_reporting/render_reports.R")
+render_all_notebooks("../notebooks/")
 ```

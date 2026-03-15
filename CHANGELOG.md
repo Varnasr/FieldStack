@@ -1,5 +1,26 @@
 # Changelog
 
+## [v1.2.0] - 2025-04-28
+
+### Added
+- `survey_tools/` module with 3 R scripts:
+  - `sample_size_calculator.R` — simple, stratified, and cluster sampling with design effect estimation
+  - `sampling_weights.R` — base weight calculation, trimming, and weighted summary statistics
+  - `survey_summary.R` — complex survey design objects with weighted descriptives and proportions
+- `automated_reporting/` module with 2 files:
+  - `render_reports.R` — batch rendering for Quarto and RMarkdown with output logging
+  - `monthly_summary.qmd` — Quarto template for monthly indicator summary with inline visualizations
+
+### Improved
+- README updated with detailed survey_tools and automated_reporting documentation
+- Survey tools and automated reporting sections expanded from stubs to full descriptions
+
+## [v1.1.0] - 2025-04-24
+
+### Improved
+- Full repo cleanup: removed 14 placeholder files, updated docs, added .github config
+- README rewritten with honest content listing and ecosystem links
+
 ## [v1.0.0](https://github.com/Varnasr/FieldStack/tree/v1.0.0) (2025-04-19)
 
 [Full Changelog](https://github.com/Varnasr/FieldStack/compare/954b918bc01299272877fe2d2b65194fcf7a7eed...v1.0.0)

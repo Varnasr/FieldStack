@@ -1,0 +1,54 @@
+---
+title: "Monthly Indicator Summary"
+format: html
+date: today
+params:
+  data_path: "../sample_data/mel_indicators_wide.csv"
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+## Data Overview
+
+```{r load-data}
+df <- read_csv(params$data_path, show_col_types = FALSE)
+cat(sprintf("Records: %d | Variables: %d\n", nrow(df), ncol(df)))
+```
+
+## Summary Statistics
+
+```{r summary}
+df %>%
+  select(where(is.numeric)) %>%
+  pivot_longer(everything(), names_to = "indicator", values_to = "value") %>%
+  group_by(indicator) %>%
+  summarise(
+    n = sum(!is.na(value)),
+    mean = round(mean(value, na.rm = TRUE), 1),
+    median = round(median(value, na.rm = TRUE), 1),
+    min = round(min(value, na.rm = TRUE), 1),
+    max = round(max(value, na.rm = TRUE), 1),
+    .groups = "drop"
+  ) %>%
+  knitr::kable()
+```
+
+## Distribution
+
+```{r plot, fig.width=8, fig.height=4}
+df %>%
+  select(where(is.numeric)) %>%
+  pivot_longer(everything(), names_to = "indicator", values_to = "value") %>%
+  ggplot(aes(x = value)) +
+  geom_histogram(bins = 20, fill = "#1a56db", alpha = 0.7) +
+  facet_wrap(~indicator, scales = "free") +
+  theme_minimal() +
+  labs(title = "Indicator Distributions", x = NULL, y = "Count")
+```
+
+---
+
+*Generated automatically by FieldStack automated reporting.*
