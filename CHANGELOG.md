@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/Varnasr/FieldStack/tree/HEAD)
+
+[Full Changelog](https://github.com/Varnasr/FieldStack/compare/v1.0.0...HEAD)
+
+**Merged pull requests:**
+
+- Chore: add git best-practice standards [\#9](https://github.com/Varnasr/FieldStack/pull/9) ([Varnasr](https://github.com/Varnasr))
+
 ## [v1.0.0](https://github.com/Varnasr/FieldStack/tree/v1.0.0) (2025-04-19)
 
 [Full Changelog](https://github.com/Varnasr/FieldStack/compare/954b918bc01299272877fe2d2b65194fcf7a7eed...v1.0.0)
