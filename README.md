@@ -5,8 +5,14 @@
 [![Part of OpenStacks](https://img.shields.io/badge/Part%20of-OpenStacks-blue)](https://openstacks.dev)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15250764.svg)](https://doi.org/10.5281/zenodo.15250764)
+[![Status: Stable](https://img.shields.io/badge/Status-Stable-0969da?style=flat-square)](https://github.com/Varnasr/OpenStacks-for-Change/blob/main/MAINTENANCE.md)
 
 > Built for use in the field — across health, gender, climate, and education programs in South Asia.
+
+> **Status: Stable.** This repository works and is correct, but it is not under active
+> development. Bug reports are welcome and issues stay open; new features are unlikely,
+> and replies are measured in weeks rather than days. Dependencies are pinned deliberately
+> so that a clone still runs years from now. See the [maintenance policy](https://github.com/Varnasr/OpenStacks-for-Change/blob/main/MAINTENANCE.md).
 
 ---
 
@@ -105,7 +111,7 @@ FieldStack is one of several stacks in the [OpenStacks](https://openstacks.dev) 
 
 ## Contributing
 
-Contributions welcome — especially from field researchers and evaluators. See [CONTRIBUTING.md](CONTRIBUTING.md).
+Contributions welcome — especially from field researchers and evaluators. See [contributing guidelines](https://github.com/Varnasr/.github/blob/main/CONTRIBUTING.md).
 
 High-impact areas:
 - **Survey design** — sample size calculators, PSU allocation, sampling frameworks
