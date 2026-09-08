@@ -51,6 +51,7 @@ This is the **applied research layer** of [OpenStacks for Change](https://openst
 | `survey_tools/sample_size_calculator.R` | Simple, stratified, and cluster sampling calculations with design effect |
 | `survey_tools/sampling_weights.R` | Base weight calculation, trimming, weighted summary statistics |
 | `survey_tools/survey_summary.R` | Survey design objects, weighted descriptives, proportions using the `survey` package |
+| `survey_tools/dhs_stunting.R` | Worked example: DHS stunting by wealth quintile with design-based intervals, checked against the published NFHS-5 table |
 
 ### Automated Reporting
 
