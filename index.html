@@ -1,90 +1,160 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>FieldStack</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 2rem auto;
-      max-width: 960px;
-      line-height: 1.6;
-      padding: 0 1rem;
-      color: #333;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    h1 {
-      font-size: 2.2rem;
-    }
-    .folder-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-    .folder-card {
-      padding: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 12px;
-      background: #f9f9f9;
-    }
-    .folder-card h3 {
-      margin: 0 0 0.5rem;
-    }
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FieldStack · R for applied data work and evaluation</title>
+<meta name="description" content="Reusable R notebooks, scripts and tools for applied data work and evaluation across South Asia. Part of the OpenStacks family.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/stack.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<header>
-  <img src="https://raw.githubusercontent.com/Varnasr/FieldStack/main/banner/FieldStack_banner.png" alt="FieldStack banner" style="max-width: 100%; height: auto;" />
-  <h1>Welcome to FieldStack</h1>
-  <p>Reusable R tools and workflows for MEL, evaluation, and social research in South Asia.</p>
+<header class="top">
+  <div class="in">
+    <a class="brand" href="./"><span class="dot"></span> FieldStack</a>
+    <nav>
+      <a class="opt" href="#modules">Modules</a>
+      <a class="opt" href="#survey">Survey tools</a>
+      <a href="https://github.com/Varnasr/FieldStack">GitHub</a>
+    </nav>
+  </div>
 </header>
 
-<section>
-  <h2>📁 Modules</h2>
-  <div class="folder-grid">
-    <div class="folder-card">
-      <h3>Evaluation</h3>
-      <p>SROI, cost-effectiveness, summary tables</p>
-    </div>
-    <div class="folder-card">
-      <h3>Regression</h3>
-      <p>Interaction effects, multicollinearity, diagnostics</p>
-    </div>
-    <div class="folder-card">
-      <h3>Qualitative</h3>
-      <p>Text analysis, corpus tools, theme coders</p>
-    </div>
-    <div class="folder-card">
-      <h3>Visualisation</h3>
-      <p>Bullet, waterfall, and spatial maps</p>
-    </div>
-    <div class="folder-card">
-      <h3>Python Integration</h3>
-      <p>Use <code>reticulate</code> to embed Python in R</p>
-    </div>
-    <div class="folder-card">
-      <h3>Codebooks & Tools</h3>
-      <p>Survey templates and monitoring codebooks</p>
-    </div>
+<section class="hero">
+  <h1 class="word">Field<span class="s2">Stack</span></h1>
+  <p class="lede">Reusable R notebooks, scripts and tools for applied data work and evaluation.
+    Built for use in the field across health, gender, climate and education programmes in South
+    Asia. Part of <a href="https://openstacks.dev">OpenStacks</a>.</p>
+  <div class="counts">
+    <div class="hi"><b>32</b><span>R scripts</span></div>
+    <div><b>5</b><span>Quarto notebooks</span></div>
+    <div><b>5</b><span>Sample datasets</span></div>
+    <div><b>37</b><span>Checks in CI</span></div>
   </div>
 </section>
 
-<footer>
-  Made with 💛 by <a href="https://on-web.link/varna">Varna Sri Raman</a> · GitHub: <a href="https://github.com/Varnasr/FieldStack">Varnasr/FieldStack</a>
-</footer>
+<main id="main">
 
+<section class="band white" id="modules">
+  <div class="band-h">
+    <h2>Modules</h2>
+    <p class="sub">Every card goes somewhere</p>
+  </div>
+  <div class="tiles">
+    <a class="tile" href="evaluation/">
+      <p class="meta">Evaluation</p>
+      <h3>Evaluation</h3>
+      <p>Social return on investment, multi-year SROI, cost-effectiveness, qualitative to
+         quantitative conversion and summary tables.</p>
+      <p class="go">Open &rarr;</p>
+    </a>
+    <a class="tile" href="regression/">
+      <p class="meta">Modelling</p>
+      <h3>Regression</h3>
+      <p>Interaction models, logistic regression and multicollinearity diagnostics.</p>
+      <p class="go">Open &rarr;</p>
+    </a>
+    <a class="tile" href="survey_tools/">
+      <p class="meta">Survey</p>
+      <h3>Survey tools</h3>
+      <p>Sample size for simple, stratified and cluster designs; weights; design-based
+         descriptives using the survey package.</p>
+      <p class="go">Open &rarr;</p>
+    </a>
+    <a class="tile" href="qualitative/">
+      <p class="meta">Qualitative</p>
+      <h3>Qualitative</h3>
+      <p>Coding worked examples for text and interview material.</p>
+      <p class="go">Open &rarr;</p>
+    </a>
+    <a class="tile" href="visualisation/">
+      <p class="meta">Charts</p>
+      <h3>Visualisation</h3>
+      <p>Faceted plots and ggplot dashboards, plus bullet, waterfall and spatial charts in
+         <code>custom_viz/</code>.</p>
+      <p class="go">Open &rarr;</p>
+    </a>
+    <a class="tile" href="scripts/">
+      <p class="meta">Indices</p>
+      <h3>Index builders</h3>
+      <p>Climate vulnerability, health access and education outcome indices, and the wide-to-long
+         reshaper for MEL indicators.</p>
+      <p class="go">Open &rarr;</p>
+    </a>
+    <a class="tile" href="notebooks/">
+      <p class="meta">Quarto</p>
+      <h3>Notebooks</h3>
+      <p>Climate risk, education, public health and MEL dashboard summaries as Quarto documents.</p>
+      <p class="go">Open &rarr;</p>
+    </a>
+    <a class="tile" href="python_integration/">
+      <p class="meta">Interop</p>
+      <h3>Python integration</h3>
+      <p>Embedding Python inside R with <code>reticulate</code>.</p>
+      <p class="go">Open &rarr;</p>
+    </a>
+  </div>
+</section>
+
+<section class="band navy" id="survey">
+  <div class="band-h">
+    <h2>DHS worked example</h2>
+    <p class="sub">Design-based estimates, checked against the published table</p>
+  </div>
+  <div class="tiles">
+    <a class="tile" href="survey_tools/dhs_stunting.R">
+      <p class="meta">survey_tools/dhs_stunting.R</p>
+      <h3>Child stunting by wealth quintile</h3>
+      <p>Estimates stunting from a DHS children's recode with design-based intervals, then
+         compares the result against the figures DHS published: 35.5 percent nationally for
+         India's NFHS-5, 46.1 in the poorest wealth quintile falling to 22.9 in the richest.
+         Reproducing that table is the only cheap proof a survey pipeline is right end to end.</p>
+      <p class="go">Read the script &rarr;</p>
+    </a>
+    <a class="tile" href="https://github.com/Varnasr/InsightStack/tree/main/data_starters/dhs-south-asia">
+      <p class="meta">InsightStack</p>
+      <h3>Where the data comes in</h3>
+      <p>The loader that turns a raw DHS recode into the CSV this script consumes. The two are
+         coupled through a file rather than a dependency, so neither repository needs the other
+         installed.</p>
+      <p class="go">Open the loader &rarr;</p>
+    </a>
+  </div>
+  <p class="note">Two DHS specifics are handled here and both return a wrong number rather than an
+    error: subgroups go through <code>svyby</code> on the whole design rather than a filtered data
+    frame, and design effects use <code>deff = "replace"</code>, because <code>v005</code> is a
+    relative weight and the default returns values like 165 where the answer is 1.11.</p>
+</section>
+
+<section class="band ash">
+  <div class="band-h">
+    <h2>Status</h2>
+    <p class="sub">Stable</p>
+  </div>
+  <p class="note">This repository works and is correct, but is not under active development. Bug
+    reports are welcome and issues stay open; new features are unlikely, and replies are measured
+    in weeks rather than days. See the
+    <a href="https://github.com/Varnasr/OpenStacks-for-Change/blob/main/MAINTENANCE.md">maintenance policy</a>.</p>
+  <p class="note">Citable: <a href="https://doi.org/10.5281/zenodo.15250764">10.5281/zenodo.15250764</a>.
+    The companion repositories are
+    <a href="https://github.com/Varnasr/InsightStack">InsightStack</a> for calculators, Stata and
+    data loaders, and <a href="https://github.com/Varnasr/EquityStack">EquityStack</a> for Python.</p>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="fl">
+    <a href="https://openstacks.dev">OpenStacks</a>
+    <a href="https://github.com/Varnasr/FieldStack">GitHub</a>
+    <a href="CHANGELOG.md">Changelog</a>
+    <a href="LICENSE">MIT Licence</a>
+  </div>
+  <p>Varna Sri Raman. Built for use in the field, and licensed so you can take it.</p>
+</footer>
 </body>
 </html>
