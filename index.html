@@ -17,6 +17,7 @@
   <div class="in">
     <a class="brand" href="./"><span class="dot"></span> FieldStack</a>
     <nav>
+      <a class="opt" href="#field">Field</a>
       <a class="opt" href="#modules">Modules</a>
       <a class="opt" href="#survey">Survey tools</a>
       <a href="https://github.com/Varnasr/FieldStack">GitHub</a>
@@ -26,25 +27,82 @@
 
 <section class="hero">
   <h1 class="word">Field<span class="s2">Stack</span></h1>
-  <p class="lede">Reusable R notebooks, scripts and tools for applied data work and evaluation.
-    Built for use in the field across health, gender, climate and education programmes in South
-    Asia. Part of <a href="https://openstacks.dev">OpenStacks</a>.</p>
+  <p class="lede">R for the fortnight the data is being collected, and for the analysis after.
+    Duplicate IDs, interviews finished in a quarter of the time, an enumerator whose numbers do
+    not look like anyone else's, then sample size, weights and design-based estimates.
+    Built for health, gender, climate and education programmes in South Asia.
+    Part of <a href="https://openstacks.dev">OpenStacks</a>.</p>
   <div class="counts">
-    <div class="hi"><b>32</b><span>R scripts</span></div>
-    <div><b>8</b><span>Modules</span></div>
-    <div><b>5</b><span>Quarto notebooks</span></div>
-    <div><b>5</b><span>Sample datasets</span></div>
+    <div class="hi"><b>9</b><span>Modules</span></div>
+    <div><b>13</b><span>Field checks</span></div>
+    <div><b>4</b><span>Quarto notebooks</span></div>
+    <div><b>119</b><span>Tests</span></div>
   </div>
 </section>
 
 <main id="main">
 
-<section class="band white" id="modules">
+<section class="band white" id="field">
   <div class="band-h">
-    <h2>Modules</h2>
-    <p class="sub">Eight folders of R, grouped by the question they answer</p>
+    <h2>In the field</h2>
+    <p class="sub">Catching bad data while the team is still in the district</p>
   </div>
   <div class="tiles">
+    <a class="tile" href="https://github.com/Varnasr/FieldStack/blob/main/field_ops/README.md">
+      <p class="meta">field_ops/</p>
+      <h3>The evening run</h3>
+      <p>One command against the day's export. It returns the cases to act on tomorrow and the
+         per-enumerator summary for the morning meeting. A duplicated household ID found on day
+         three is a phone call; found at analysis it is a hole in the sample nobody can fill,
+         because the team has left and the respondent cannot be re-identified.</p>
+      <p class="go">Read the guide &rarr;</p>
+    </a>
+    <a class="tile" href="https://github.com/Varnasr/FieldStack/blob/main/field_ops/high_frequency_checks.R">
+      <p class="meta">High-frequency checks</p>
+      <h3>Duration is the check that pays</h3>
+      <p>A questionnaire that takes 45 minutes and was completed in 11 was not administered as
+         written. The timestamps are already in the export, so this costs nothing. Alongside it:
+         duplicate IDs, blanks in questions that are never skipped, values outside a bound you
+         declare, and a battery where every item got the same answer.</p>
+      <p class="go">Read the module &rarr;</p>
+    </a>
+    <a class="tile" href="https://github.com/Varnasr/FieldStack/blob/main/field_ops/enumerator_monitoring.R">
+      <p class="meta">Enumerator monitoring</p>
+      <h3>Look, do not conclude</h3>
+      <p>An enumerator whose households report much lower consumption may be fabricating, or may
+         have been sent to the poorest block. No statistic separates those, and the difference is
+         somebody's job. Comparisons are leave-one-out and can be held within village, which is
+         the only version that is interpretable.</p>
+      <p class="go">Read the module &rarr;</p>
+    </a>
+    <a class="tile" href="https://github.com/Varnasr/FieldStack/blob/main/field_ops/back_checks.R">
+      <p class="meta">Back checks</p>
+      <h3>The one thing that does separate them</h3>
+      <p>A supervisor re-asks a short subset of the questions. Classify them first: sex of the
+         household head should never differ between two competent interviews, last month's income
+         legitimately may. One error rate pooled across both makes an honest enumerator asking hard
+         recall questions look worse than a careless one.</p>
+      <p class="go">Read the module &rarr;</p>
+    </a>
+  </div>
+  <p class="note">Base R, no packages, because this runs on whatever laptop is in the district
+    office. Nothing here corrects anything: a check that silently repairs data hides the repair
+    from analysis and teaches the enumerator nothing. It flags, and a person decides.</p>
+</section>
+
+<section class="band ash" id="modules">
+  <div class="band-h">
+    <h2>Modules</h2>
+    <p class="sub">Nine folders of R, grouped by the question they answer</p>
+  </div>
+  <div class="tiles">
+    <a class="tile" href="https://github.com/Varnasr/FieldStack/tree/main/field_ops">
+      <p class="meta">Field operations</p>
+      <h3>Field checks</h3>
+      <p>Thirteen checks for data still being collected: duplicates, duration, working hours,
+         straightlining, GPS, back checks, enumerator monitoring, and an ODK reader.</p>
+      <p class="go">Open &rarr;</p>
+    </a>
     <a class="tile" href="https://github.com/Varnasr/FieldStack/tree/main/evaluation">
       <p class="meta">Evaluation</p>
       <h3>Evaluation</h3>

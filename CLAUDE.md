@@ -8,10 +8,17 @@ family. Status: Stable, per the family
 
 ## Layout
 
-R throughout. `scripts/` holds index and reshape functions, `evaluation/` and
-`regression/` hold analysis code, `survey_tools/` holds sampling and weighted
-estimation, `custom_viz/` and `visualisation/` hold plotting, `notebooks/` holds
-Quarto documents, `sample_data/` holds small CSVs for the tests and examples.
+R throughout. Two directories carry the repository: `field_ops/` for work done
+while the survey is still in the field, and `survey_tools/` for sampling and
+weighted estimation afterwards. Around them, `scripts/` holds index and reshape
+functions, `evaluation/` and `regression/` hold analysis code, `custom_viz/` and
+`visualisation/` hold plotting, `notebooks/` holds Quarto documents,
+`sample_data/` holds small CSVs for the tests and examples.
+
+Sizes, so nobody has to guess: `field_ops/` is about 1,150 lines, `survey_tools/`
+487. Most of the remaining twenty files are under twenty lines and define no
+function at all. That split is deliberate, but do not describe a fifteen-line
+demonstration script as a module in user-facing copy.
 
 Note that some files in `evaluation/` and `custom_viz/` are demonstration
 scripts rather than libraries: they run top to bottom and define no functions.
@@ -38,6 +45,32 @@ their first line and stay broken indefinitely, because there was no CI to say so
 tested functions that had never been in this repository. A stub that cannot run
 is not coverage, it is the appearance of coverage. Delete it, and bring it back
 with the function.
+
+## field_ops
+
+The part that answers to the repository's name. Everything else here analyses
+data somebody else collected; this is the fortnight when the data is being made,
+which is the only window in which most problems can still be fixed.
+
+Four things in it are load-bearing and easy to undo:
+
+- **`within` is not optional in practice.** Enumerators are almost never
+  randomly assigned to areas, so an unqualified `enumerator_outliers` confounds
+  the enumerator with where they were sent. The result carries a `caveat`
+  attribute saying so; keep it attached if you refactor.
+- **Back-check questions are classified type 1/2/3 and the rates are never
+  pooled.** `back_check_compare` deliberately returns no overall error rate. One
+  number across the three types makes an honest enumerator asking hard recall
+  questions look worse than a careless one asking easy ones.
+- **`hfc_outside_hours` takes a timezone and defaults to Asia/Kolkata.** ODK
+  stamps UTC and an ordinary 09:00 Bihar interview is 03:30 UTC. Leaving it in
+  UTC flags the whole survey, and a field team that gets one useless report
+  stops reading the next one.
+- **Nothing corrects anything.** A check that silently repairs data hides the
+  repair from analysis and teaches the enumerator nothing.
+
+Base R only, no packages, because this code runs in a district office on a
+connection that will not install anything. Keep it that way.
 
 ## Watch out for
 
