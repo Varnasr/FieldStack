@@ -1,55 +1,38 @@
-# Survey Tools
+# Survey tools
 
-R functions for survey design and analysis using the `survey` and `srvyr` packages.
+R for survey design and weighted analysis with the `survey` package.
 
-## Contents
-
-| Script | Purpose |
-|--------|---------|
-| `sample_size_calculator.R` | Calculate sample sizes for simple, stratified, and cluster designs |
-| `sampling_weights.R` | Compute and apply survey weights for complex designs |
-| `survey_summary.R` | Weighted descriptive statistics with confidence intervals |
-| `dhs_stunting.R` | Worked example: DHS stunting by wealth quintile, design-based, checked against the published NFHS-5 table |
-
-## Usage
+| Script | What it does |
+| --- | --- |
+| `sample_size_calculator.R` | Sample size for simple, stratified and cluster designs |
+| `sampling_weights.R` | Base weights, trimming, weighted summaries |
+| `survey_summary.R` | Design objects and weighted descriptives with confidence intervals |
+| `dhs_stunting.R` | DHS stunting by wealth quintile, design-based, checked against the published NFHS-5 table |
 
 ```r
 source("survey_tools/sample_size_calculator.R")
 sample_size_simple(p = 0.5, margin = 0.05, confidence = 0.95)
 ```
 
-## The DHS worked example
+## The DHS example
 
-`dhs_stunting.R` is the analysis half of a chain that begins in
-[InsightStack](https://github.com/Varnasr/InsightStack)'s
-`data_starters/dhs-south-asia/`, which turns a raw DHS recode into a clean CSV.
-The two repositories are coupled through a file, not a dependency.
+`dhs_stunting.R` reads the CSV written by InsightStack's
+`data_starters/dhs-south-asia/` loader and reproduces India's published
+NFHS-5 stunting table by wealth quintile.
 
 ```r
 source("survey_tools/dhs_stunting.R")
 dhs_stunting_report("children.csv")
 ```
 
-It reproduces India's published NFHS-5 stunting table by wealth quintile and
-tells you when it does not, which is the only cheap check that a survey pipeline
-is right end to end.
-
-Two DHS specifics are handled in it, and both bite people who do not know them.
-Subgroups go through `svyby` on the whole design, never a data frame filtered
-before `svydesign()`, because filtering first discards the clusters holding none
-of the subgroup and shrinks the standard error. And design effects use
-`deff = "replace"`, because `v005` is a relative weight normalised to average
-one, not a population expansion weight: on a 40-cluster extract the default
-`deff = TRUE` returned 165, 207 and two NAs where the correct values are 1.11,
-0.83 and 1.49. The same mismatch makes `survey` warn "Sample size greater than
-population size: are weights correctly scaled?", which on DHS data is expected
-and is not a reason to rescale anything.
+Two DHS details are handled in it. Subgroups go through `svyby` on the whole
+design, not a data frame filtered before `svydesign()`, since filtering drops
+the clusters that hold none of the subgroup and shrinks the standard error.
+Design effects use `deff = "replace"`, because `v005` is a relative weight
+normalised to average one; the default `deff = TRUE` returns values like 165
+where the answer is 1.11. On DHS data the warning "Sample size greater than
+population size" is expected.
 
 ## Requirements
 
-- R 4.0+
-- `tidyverse`
-- `survey` (for `survey_summary.R` and `dhs_stunting.R`)
-
-Verified on R 4.3.3 with survey 4.2.1. `dhs_stunting.R` previously declared a
-dependency on dplyr and used none of it; that has been removed.
+R 4.0 or later, `tidyverse`, `survey`. Verified on R 4.3.3 with survey 4.2.1.
