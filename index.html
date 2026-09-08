@@ -42,70 +42,76 @@
 <section class="band white" id="modules">
   <div class="band-h">
     <h2>Modules</h2>
-    <p class="sub">Every card goes somewhere</p>
+    <p class="sub">Eight folders of R, grouped by the question they answer</p>
   </div>
   <div class="tiles">
     <a class="tile" href="https://github.com/Varnasr/FieldStack/tree/main/evaluation">
       <p class="meta">Evaluation</p>
       <h3>Evaluation</h3>
-      <p>Social return on investment, multi-year SROI, cost-effectiveness, qualitative to
-         quantitative conversion and summary tables.</p>
+      <p>What did a rupee of programme spending return, and over how many years? Cost per
+         outcome, social return across a multi-year horizon, and a way of putting coded
+         interview material beside the numbers.</p>
       <p class="go">Open &rarr;</p>
     </a>
     <a class="tile" href="https://github.com/Varnasr/FieldStack/tree/main/regression">
       <p class="meta">Modelling</p>
       <h3>Regression</h3>
-      <p>Interaction models, logistic regression and multicollinearity diagnostics.</p>
+      <p>Did the effect differ for the group you care about? Interaction terms, logistic models
+         for yes-or-no outcomes, and a check for two predictors telling you the same thing
+         twice.</p>
       <p class="go">Open &rarr;</p>
     </a>
     <a class="tile" href="https://github.com/Varnasr/FieldStack/tree/main/survey_tools">
       <p class="meta">Survey</p>
       <h3>Survey tools</h3>
-      <p>Sample size for simple, stratified and cluster designs; weights; design-based
-         descriptives using the survey package.</p>
+      <p>How many households do you need to interview, and what does the answer look like once
+         the sampling design is accounted for? Sample size for simple, stratified and cluster
+         designs, weights, and weighted summaries.</p>
       <p class="go">Open &rarr;</p>
     </a>
     <a class="tile" href="https://github.com/Varnasr/FieldStack/tree/main/qualitative">
       <p class="meta">Qualitative</p>
       <h3>Qualitative</h3>
-      <p>Coding worked examples for text and interview material.</p>
+      <p>A worked example of coding open-ended responses and interview text so they can be
+         counted alongside the survey.</p>
       <p class="go">Open &rarr;</p>
     </a>
     <a class="tile" href="https://github.com/Varnasr/FieldStack/tree/main/visualisation">
       <p class="meta">Charts</p>
       <h3>Visualisation</h3>
-      <p>Faceted plots and ggplot dashboards, plus bullet, waterfall and spatial charts in
-         <code>custom_viz/</code>.</p>
+      <p>Charts built for a report rather than a screen: one panel per district, target against
+         actual, what moved a total between two years, and a district map.</p>
       <p class="go">Open &rarr;</p>
     </a>
     <a class="tile" href="https://github.com/Varnasr/FieldStack/tree/main/scripts">
       <p class="meta">Indices</p>
       <h3>Index builders</h3>
-      <p>Climate vulnerability, health access and education outcome indices, and the wide-to-long
-         reshaper for MEL indicators.</p>
+      <p>Composite scores for climate vulnerability, health access and education outcomes, and
+         the reshaper that turns a wide indicator tracker into something you can plot.</p>
       <p class="go">Open &rarr;</p>
     </a>
     <a class="tile" href="https://github.com/Varnasr/FieldStack/tree/main/notebooks">
       <p class="meta">Quarto</p>
       <h3>Notebooks</h3>
-      <p>Climate risk, education, public health and MEL dashboard summaries as Quarto documents.</p>
+      <p>Four Quarto documents you can point at your own data and re-render: climate risk,
+         education, public health, and a MEL dashboard summary.</p>
       <p class="go">Open &rarr;</p>
     </a>
     <a class="tile" href="https://github.com/Varnasr/FieldStack/tree/main/python_integration">
       <p class="meta">Interop</p>
       <h3>Python integration</h3>
-      <p>Embedding Python inside R with <code>reticulate</code>.</p>
+      <p>Calling Python from inside an R script, for when the library you need lives on the
+         other side.</p>
       <p class="go">Open &rarr;</p>
     </a>
   </div>
-  <p class="note">These open on GitHub. They are source code rather than pages: R scripts and
-    Quarto documents meant to be read, cloned and run, not browsed like a website.</p>
+  <p class="note">These open on GitHub, where the code lives.</p>
 </section>
 
 <section class="band navy" id="survey">
   <div class="band-h">
     <h2>DHS worked example</h2>
-    <p class="sub">Design-based estimates, checked against the published table</p>
+    <p class="sub">Checked against the figures DHS published</p>
   </div>
   <div class="tiles">
     <a class="tile" href="https://github.com/Varnasr/FieldStack/blob/main/survey_tools/dhs_stunting.R">
