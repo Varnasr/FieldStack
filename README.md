@@ -7,7 +7,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15250764.svg)](https://doi.org/10.5281/zenodo.15250764)
 [![Status: Stable](https://img.shields.io/badge/Status-Stable-0969da?style=flat-square)](https://github.com/Varnasr/OpenStacks-for-Change/blob/main/MAINTENANCE.md)
 
-> Built for use in the field — across health, gender, climate, and education programs in South Asia.
+> For the fortnight the data is being collected, and for the analysis after. Health, gender, climate and education programmes in South Asia.
 
 > **Status: Stable.** This repository works and is correct, but it is not under active
 > development. Bug reports are welcome and issues stay open; new features are unlikely,
@@ -18,11 +18,36 @@
 
 ## What This Is
 
-FieldStack is a collection of **R notebooks, scripts, and sample data** for applied research and evaluation work. It covers regression analysis, cost-effectiveness, qualitative coding, data visualisation, and reporting — all grounded in real South Asian fieldwork needs.
+FieldStack is R for two jobs. The first is **field operations**: the checks a
+supervisor runs each evening against the day's export, while the team is still
+in the district and a problem can still be fixed. The second is **survey
+analysis**: sample size, weights and design-based estimates once the data is in.
+
+Around those sit smaller pieces for regression, cost-effectiveness, qualitative
+coding, visualisation and reporting.
 
 This is the **applied research layer** of [OpenStacks for Change](https://openstacks.dev) — an open ecosystem of tools for public interest research and evaluation.
 
 ## What's Inside
+
+### Field operations
+
+The evening run. One command against the day's export returns the cases to act
+on tomorrow and the per-enumerator summary for the morning meeting.
+
+| File | What It Does |
+|---|---|
+| `field_ops/daily_report.R` | The thing that gets run. Applies the whole battery and writes two CSVs |
+| `field_ops/high_frequency_checks.R` | Duplicate IDs, blanks in never-skipped questions, out-of-range values, interview duration, working hours, straightlining |
+| `field_ops/enumerator_monitoring.R` | Workload, missingness and "don't know" rates, leave-one-out outlier detection, daily load |
+| `field_ops/back_checks.R` | Supervisor re-interview compared against the original, by question type |
+| `field_ops/gps_checks.R` | Haversine distance, interviews recorded far from the assigned cluster, households sharing a coordinate |
+| `field_ops/read_odk.R` | Reads an ODK/KoBo/SurveyCTO wide export: strips group prefixes, parses timestamps, converts sentinel codes, expands select_multiple |
+
+Base R throughout, no packages, because this runs on whatever laptop is in the
+district office. See `field_ops/README.md` for the five things that decide
+whether it works, including why `within` is not really optional and why the
+timezone argument matters more than it looks.
 
 ### Core Scripts
 
@@ -42,7 +67,7 @@ This is the **applied research layer** of [OpenStacks for Change](https://openst
 |-----------|-----------------|
 | `sample_data/` | 4 realistic datasets: climate exposure (150 rows), health services (200), education outcomes (200), MEL indicators (100) |
 | `codebook_templates/` | Variable metadata for health surveys and programme monitoring |
-| `tests/` | 6 testthat files, 37 checks, run in CI on every pull request |
+| `tests/` | 7 testthat files, 119 checks, run in CI on every pull request |
 
 ### Survey Tools
 
