@@ -15,12 +15,9 @@
 #
 # The two repositories are coupled through a file rather than a dependency.
 #
-# Requires: survey, dplyr
+# Requires: survey
 
-suppressPackageStartupMessages({
-  library(survey)
-  library(dplyr)
-})
+suppressPackageStartupMessages(library(survey))
 
 # DHS Program API, indicator CN_NUTS_C_HA2 (children stunted, height-for-age
 # below -2 SD of the WHO 2006 median), survey IA2020DHS, retrieved 2026-09-08.

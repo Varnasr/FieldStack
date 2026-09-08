@@ -42,7 +42,7 @@ This is the **applied research layer** of [OpenStacks for Change](https://openst
 |-----------|-----------------|
 | `sample_data/` | 4 realistic datasets: climate exposure (150 rows), health services (200), education outcomes (200), MEL indicators (100) |
 | `codebook_templates/` | Variable metadata for health surveys and programme monitoring |
-| `tests/` | 9 testthat unit tests covering all core functions |
+| `tests/` | 6 testthat files, 37 checks, run in CI on every pull request |
 
 ### Survey Tools
 

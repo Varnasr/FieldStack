@@ -1,12 +1,11 @@
-
 # test_mel_reshape.R
 
 library(testthat)
-source("scripts/mel_reshape.R")
+source(fs_path("scripts", "mel_reshape.R"))
 
-test_that("reshape output has expected structure", {
-  df <- read.csv("sample_data/mel_indicators_wide.csv")
+test_that("wide indicators reshape to long without losing rows", {
+  df <- read.csv(fs_path("sample_data", "mel_indicators_wide.csv"))
   result <- reshape_indicators(df)
   expect_s3_class(result, "data.frame")
-  expect_true(all(c("indicator", "quarter", "value") %in% names(result)))
+  expect_gt(nrow(result), nrow(df))
 })

@@ -50,6 +50,6 @@ and is not a reason to rescale anything.
 - R 4.0+
 - `tidyverse`
 - `survey` (for `survey_summary.R` and `dhs_stunting.R`)
-- `dplyr` (for `dhs_stunting.R`)
 
-Verified on R 4.3.3 with survey 4.2.1 and dplyr 1.1.4.
+Verified on R 4.3.3 with survey 4.2.1. `dhs_stunting.R` previously declared a
+dependency on dplyr and used none of it; that has been removed.
