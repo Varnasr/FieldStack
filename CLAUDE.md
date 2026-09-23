@@ -31,8 +31,21 @@ assuming a file exports something.
 main. No schedule: nothing here touches an external service.
 
 ```r
-source("tests/run_all_tests.R")   # 6 files, 37 checks
+source("tests/run_all_tests.R")   # 7 files, 119 checks
 ```
+
+That count was 6 and 37 until 2026-09-23. `field_ops/` arrived in the same
+commit that rewrote 41 lines of this file and left the comment alone, so the
+repository understated its own suite by more than threefold from the day the
+suite tripled. Nothing compares the two.
+
+119 is what testthat reports, not what a grep counts. `run_all_tests.R` uses
+the summary reporter, which prints one character per **expectation**, and the
+run breaks down as climate_index 3, dhs_stunting 14, education_outcomes 2,
+field_ops 82, health_access_index 3, mel_reshape 2, survey_summary 13. A grep
+for `expect_` in the same files finds 112, because some expectations sit
+inside loops and run more than once. If you update this number, read it off a
+run rather than off the source.
 
 Two things to know before adding a test.
 
