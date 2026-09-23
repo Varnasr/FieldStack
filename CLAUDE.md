@@ -31,8 +31,13 @@ assuming a file exports something.
 main. No schedule: nothing here touches an external service.
 
 ```r
-source("tests/run_all_tests.R")   # 6 files, 37 checks
+source("tests/run_all_tests.R")   # 7 files, 55 test_that blocks
 ```
+
+That count was 6 and 37 until 2026-09-23. `field_ops/` and its 41 `test_that`
+blocks arrived in the same commit that rewrote 41 lines of this file and left
+the comment alone, so the repository understated its own suite by a factor of
+three from the day the suite tripled. Nothing compares the two.
 
 Two things to know before adding a test.
 
