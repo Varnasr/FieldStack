@@ -1,5 +1,7 @@
 # FieldStack
 
+Shared engineering standard: @.claude/engineering-standards.md. It applies to all work in this repository. This file adds what is specific to the project, and wins where the two disagree.
+
 Reusable R notebooks, scripts and tools for applied data work and evaluation,
 built for use in the field across health, gender, climate and education
 programmes in South Asia. Part of the [OpenStacks](https://openstacks.dev)
