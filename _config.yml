@@ -1,5 +1,7 @@
 title: FieldStack
 description: Reusable R notebooks, scripts and tools for applied data work and evaluation.
+url: https://varnasr.github.io
+baseurl: /FieldStack
 markdown: kramdown
 
 # GitHub Pages runs this plugin, which turns each folder's README.md into that
