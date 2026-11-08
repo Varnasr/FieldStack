@@ -2,6 +2,9 @@ title: FieldStack
 description: Reusable R notebooks, scripts and tools for applied data work and evaluation.
 url: https://varnasr.github.io
 baseurl: /FieldStack
+# Default link-preview card, drawn by scripts/make_share_card.py. A page can set image and image_alt.
+share_image: /assets/share-card.jpg
+share_image_alt: "FieldStack. R for the checks a survey team runs while data is being collected, and for sampling and weighted estimation after. Part of the OpenStacks family."
 markdown: kramdown
 
 # GitHub Pages runs this plugin, which turns each folder's README.md into that
